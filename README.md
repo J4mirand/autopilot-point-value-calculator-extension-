@@ -84,7 +84,8 @@ tests/                           Jest test suites
 ## Roadmap
 
 - [ ] Support additional airlines and loyalty programs (United, Delta, WestJet Rewards)
-- [ ] Better handling of interline/mixed-carrier itineraries
+- [ ] Extension compatibility with other browsers (e.g. Firefox)
+- [ ] CPP value for reward types
 - [ ] Price alerts when CPP exceeds a threshold
 - [ ] Multi-currency support beyond CAD and USD
 - [ ] Improved cash fare comparison (across airlines, not just AC)
