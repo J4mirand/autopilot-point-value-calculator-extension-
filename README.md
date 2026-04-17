@@ -4,8 +4,6 @@
 
 Autopilot is a free, open source Chrome extension that shows you the real value of your Aeroplan points on every Air Canada flight. Color-coded badges appear directly on search results, letting you instantly know whether to book with points or pay cash.
 
-![Autopilot in action](../Screenshot%201.png)
-
 ## What It Does
 
 When you search for flights on [aircanada.com](https://www.aircanada.com) using Aeroplan points, Autopilot:
