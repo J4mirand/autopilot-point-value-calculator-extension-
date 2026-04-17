@@ -57,9 +57,11 @@ Thanks for your interest in contributing! This guide will help you get started.
 Open an issue first to discuss. Some ideas from the roadmap:
 
 - **New airlines and loyalty programs** — add support for United MileagePlus, Delta SkyMiles, WestJet Rewards, etc.
-- **Interline itinerary handling** — better logic for mixed-carrier redemptions
+- **Browser compatibility** — port the extension to Firefox and other browsers
+- **CPP value for reward types** — calculate point value for different reward categories
 - **Price alerts** — notify users when CPP exceeds a threshold
 - **Multi-currency** — support beyond CAD and USD
+- **Improved cash fare comparison** — compare across airlines, not just AC
 
 ## Code Style
 
