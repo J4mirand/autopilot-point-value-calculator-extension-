@@ -1,0 +1,120 @@
+/* ============================================
+   Autopilot — Shared Design Tokens & Base Styles
+   ============================================ */
+
+:root {
+  /* Brand rating colours */
+  --autopilot-max: #22C55E;
+  --autopilot-good: #EAB308;
+  --autopilot-bad: #EF4444;
+
+  /* Surface palette */
+  --autopilot-bg: #1a1a2e;
+  --autopilot-surface: #16213e;
+  --autopilot-text: #e0e0e0;
+  --autopilot-text-muted: #a0a0a0;
+  --autopilot-border: #2a2a4a;
+
+  /* Typography */
+  --autopilot-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ----- Keyframes ----- */
+
+@keyframes autopilot-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes autopilot-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----- Badge ----- */
+
+.autopilot-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--autopilot-bg);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: var(--autopilot-font);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--autopilot-text);
+  animation: autopilot-fade-in 150ms ease;
+}
+
+.autopilot-badge[data-rating="max"] {
+  border-left: 3px solid var(--autopilot-max);
+}
+
+.autopilot-badge[data-rating="good"] {
+  border-left: 3px solid var(--autopilot-good);
+}
+
+.autopilot-badge[data-rating="bad"] {
+  border-left: 3px solid var(--autopilot-bad);
+}
+
+.autopilot-badge__label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.autopilot-badge__cpp {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ----- Tooltip ----- */
+
+.autopilot-tooltip {
+  position: fixed;
+  z-index: 2147483647;
+  width: 300px;
+  background: var(--autopilot-surface);
+  border: 1px solid var(--autopilot-border);
+  border-radius: 10px;
+  padding: 16px;
+  font-family: var(--autopilot-font);
+  font-size: 13px;
+  color: var(--autopilot-text);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  animation: autopilot-slide-up 120ms ease;
+}
+
+/* ----- Info icon ----- */
+
+.autopilot-info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--autopilot-border);
+  background: transparent;
+  color: var(--autopilot-text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+  padding: 0;
+  line-height: 1;
+}
+
+.autopilot-info-icon:hover {
+  background: var(--autopilot-border);
+  color: var(--autopilot-text);
+}

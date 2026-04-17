@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=380" />
+  <title>Autopilot</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img class="header__logo" src="../../icons/logo.png" alt="Autopilot" />
+  </header>
+
+  <div class="content">
+    <!-- Deals section (shown when flight data is available) -->
+    <div id="deals-section" style="display:none">
+      <h2 class="welcome">Top Deals</h2>
+      <p class="body-text body-text--small deals-subtitle" id="deals-subtitle"></p>
+      <div id="deals-list"></div>
+    </div>
+
+    <!-- Welcome section (shown when no flight data) -->
+    <div id="welcome-section">
+      <h2 class="welcome">Welcome to Autopilot!</h2>
+
+      <p class="body-text">
+        Thank you for downloading our extension! We're here to help you maximize your Aeroplan rewards. To start, open the
+        <a href="https://www.aircanada.com" class="link" target="_blank">Air Canada website</a>, select "Book with points".
+      </p>
+
+      <div class="book-points-badge">
+        <svg class="book-points-badge__icon" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="18" height="2" rx="1" fill="#4B5563"/>
+          <rect x="1" y="6" width="18" height="2" rx="1" fill="#4B5563"/>
+          <rect x="1" y="11" width="18" height="2" rx="1" fill="#4B5563"/>
+        </svg>
+        <span class="book-points-badge__text">Book with Aeroplan points</span>
+        <svg class="book-points-badge__check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="18" height="18" rx="3" fill="#1D4ED8"/>
+          <path d="M6 10L9 13L14 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <p class="body-text">
+        Enter your flight information and search for flights. As soon as you reach the flight results page, Autopilot calculates the <strong>cost per point (CPP)</strong> for each flight automatically!
+      </p>
+
+      <p class="notice">
+        <strong>Please note that Autopilot only supports redemptions made on Air Canada, and plans to support more airlines in the future.</strong>
+      </p>
+
+      <!-- Badge legend -->
+      <h3 class="section-title">Badges</h3>
+
+      <p class="body-text">
+        Aeroplan points are currently valued at an average of <strong>2.1 CPP (CAD).</strong>* The higher the CPP of a given flight, the more you save by using points!
+      </p>
+
+      <div class="badge-legend">
+        <div class="badge-legend__item">
+          <span class="badge badge--good">
+            <span class="badge__icon"><svg width="14" height="14" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#166534"/><path d="M10 15V8M7 10l3-3 3 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+            <span>3.0</span>
+            <span class="badge__unit">CPP</span>
+          </span>
+          <p class="badge-legend__desc">Flights valued over <strong>2.1</strong> CPP. It's smart to <strong>pay with points</strong> for these flights.</p>
+        </div>
+
+        <div class="badge-legend__item">
+          <span class="badge badge--max">
+            <span class="badge__icon"><svg width="14" height="14" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#92400E"/><polygon points="10,3.5 12,8 17,8.5 13.5,12 14.5,17 10,14.5 5.5,17 6.5,12 3,8.5 8,8" fill="white"/></svg></span>
+            <span>5.0</span>
+            <span class="badge__unit">CPP</span>
+          </span>
+          <p class="badge-legend__desc"><strong>The ultimate deal.</strong> Flights with this badge offer the highest value for your points.</p>
+        </div>
+
+        <div class="badge-legend__item">
+          <span class="badge badge--bad">
+            <span class="badge__icon"><svg width="14" height="14" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#991B1B"/><path d="M10 5v7M7 10l3 3 3-3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+            <span>1.0</span>
+            <span class="badge__unit">CPP</span>
+          </span>
+          <p class="badge-legend__desc">Flights valued lower than <strong>2.1</strong> CPP. For these flights, it's better to <strong>pay with cash.</strong></p>
+        </div>
+      </div>
+
+      <p class="body-text">
+        For more information, hover your mouse over any badge. A small window will pop up showing how much you could save by choosing to pay with points or cash.
+      </p>
+
+      <p class="body-text">
+        If no badge appears on a flight, it means a matching cash fare could not be found for that route.
+      </p>
+
+      <p class="footnote">
+        *2.1 cents/point is the average valuation of Aeroplan points as recommended by Prince of Travel as of April 2024.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="popup-footer">
+    <a href="https://forms.gle/qQu4h66TruVkmhrB9" class="link" target="_blank">Questions or concerns? Send us feedback!</a>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Autopilot — Aeroplan Point Value Calculator",
+  "version": "1.1.0",
+  "description": "Maximize your Aeroplan point redemptions with real-time point value insights on Air Canada flights.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Autopilot — Fly more for less"
+  },
+  "background": {
+    "service_worker": "src/background/service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.aircanada.com/*"],
+      "js": [
+        "src/utils/constants.js",
+        "src/utils/algorithm.js",
+        "src/content/scraper.js",
+        "src/content/overlay.js",
+        "src/content/tooltip.js",
+        "src/content/content_main.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://*.aircanada.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/good-plane.png", "icons/bad-plane.png", "icons/best-star.png"],
+      "matches": ["*://*.aircanada.com/*"]
+    }
+  ]
+}

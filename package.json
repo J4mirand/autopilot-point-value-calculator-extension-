@@ -1,0 +1,17 @@
+{
+  "name": "autopilot-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension to maximize Aeroplan point redemptions on Air Canada",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}

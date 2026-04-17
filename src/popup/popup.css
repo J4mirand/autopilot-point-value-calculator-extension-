@@ -1,0 +1,352 @@
+/* Autopilot — Popup Styles (Light theme matching HiFi designs) */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  width: 380px;
+  max-height: 580px;
+  background: #FFFFFF;
+  color: #374151;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-y: auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.header__logo {
+  height: 36px;
+  width: auto;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+}
+
+.welcome {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.body-text {
+  font-size: 13px;
+  color: #4B5563;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.body-text--small {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+.body-text strong {
+  color: #111827;
+}
+
+.link {
+  color: #2563EB;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #1D4ED8;
+}
+
+/* Book with points badge */
+.book-points-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 999px;
+  padding: 10px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.book-points-badge__icon {
+  flex-shrink: 0;
+}
+
+.book-points-badge__text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1F2937;
+  white-space: nowrap;
+}
+
+.book-points-badge__check {
+  flex-shrink: 0;
+}
+
+/* Inline icons (gray/active airplane in body text) */
+.inline-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+
+.inline-icon--gray {
+  filter: grayscale(100%) opacity(0.5);
+}
+
+/* Notice */
+.notice {
+  font-size: 13px;
+  color: #1E40AF;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.notice strong {
+  color: #1E40AF;
+  font-weight: 700;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+/* Badge legend */
+.badge-legend {
+  margin-bottom: 14px;
+}
+
+.badge-legend__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.badge-legend__desc {
+  font-size: 12px;
+  color: #4B5563;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.badge-legend__desc strong {
+  color: #111827;
+}
+
+/* Badge pills */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.badge__icon svg {
+  display: block;
+}
+
+.badge__unit {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.badge--good {
+  background: #BBF7D0;
+  color: #166534;
+}
+
+.badge--max {
+  background: #FDE68A;
+  color: #92400E;
+}
+
+.badge--bad {
+  background: #FECACA;
+  color: #991B1B;
+}
+
+/* Deals section */
+.deals-subtitle {
+  margin-bottom: 16px;
+  color: #9CA3AF;
+  font-size: 12px;
+}
+
+.deals-route-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.deals-route-header__route {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.deals-route-header__date {
+  font-size: 12px;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.deal-card {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-left: 3px solid #E5E7EB;
+  margin-bottom: 8px;
+}
+
+.deal-card--good { border-left-color: #16A34A; }
+.deal-card--max { border-left-color: #F59E0B; }
+.deal-card--bad { border-left-color: #DC2626; }
+
+/* Row 1: times + CPP badge */
+.deal-card__row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.deal-card__times {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.deal-card__cpp {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.deal-card__cpp--good { background: #BBF7D0; color: #166534; }
+.deal-card__cpp--max { background: #FDE68A; color: #92400E; }
+.deal-card__cpp--bad { background: #FECACA; color: #991B1B; }
+
+/* Row 2: cabin + cash price */
+.deal-card__row2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.deal-card__label {
+  font-size: 12px;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.deal-card__cash {
+  font-size: 12px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.deal-card__price-label {
+  font-weight: 400;
+  color: #9CA3AF;
+  font-size: 11px;
+}
+
+.deal-card__points {
+  font-size: 12px;
+  color: #374151;
+  font-weight: 600;
+}
+
+/* Row 3: savings */
+.deal-card__row3 {
+  margin-top: 2px;
+}
+
+.deal-card__savings {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.deal-card__savings--good,
+.deal-card__savings--max {
+  color: #16A34A;
+}
+
+.deal-card__savings--bad {
+  color: #DC2626;
+}
+
+/* Footnote */
+.footnote {
+  font-size: 11px;
+  color: #9CA3AF;
+  line-height: 1.5;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* Footer */
+.popup-footer {
+  padding: 12px 20px;
+  border-top: 1px solid #F3F4F6;
+  text-align: center;
+}
+
+.popup-footer .link {
+  font-size: 13px;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 3px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
